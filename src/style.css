@@ -1,0 +1,61 @@
+:root {
+    --island-color: #272730;
+    background-color: #202025;
+    color: #f0f0f0;
+    font-family: 'Space Grotesk', 'Anuphan', 'Open Sans', sans-serif;
+}
+
+#title {
+    margin-left: 1em;
+    font-size: x-large;
+    flex-grow: 1;
+}
+
+#appContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    overflow: hidden;
+    justify-content: center;
+}
+
+#roadViewport {
+    background-color: var(--island-color);
+    border-radius: 0.75rem;
+}
+
+#neuralNetworkViewport {
+    background-color: var(--island-color);
+    border-radius: 0.75rem;
+    height: auto;
+    flex-grow: 1;
+}
+
+#dataButton {
+  margin-block: 1em;
+  padding-inline: 1em;
+  background-color: #272730;
+  border: none;
+  border-radius: 0.5em;
+  color: #f0f0f0;
+}
+
+#dataButton:hover {
+  background-color: #3f3f4a;
+}
+
+#dataButton:active {
+  background-color: #1f1f2a;
+}
+
+header {
+  display: flex;
+  gap: 0.5em;
+}
+
+footer {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-size: small;
+}
