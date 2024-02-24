@@ -1,5 +1,6 @@
 class NeuralNetwork {
     constructor(neuronsPerLevel) {
+        this.score = 0;
         this.layers = [];
         for (let i = 0; i < neuronsPerLevel.length - 1; i++) {
             this.layers.push(

@@ -19,7 +19,7 @@ let traffic = [];
 let { agentCar, bestCar } = newBatch();
 
 function onReBatch() {
-    saveBestBrain(bestCar);
+    saveBestMutation(bestCar);
     const { agentCar: newAgentCar, bestCar: newBestCar } = newBatch();
     agentCar = newAgentCar;
     bestCar = newBestCar;
@@ -45,7 +45,7 @@ function tick() {
     
     const offScreen = bestCar.y + window.innerHeight * 0.5;
 
-    trafficSpawn(bestCar, traffic, road, 0.005, true, offScreen);
+    trafficSpawn(bestCar, traffic, road, 0.007, true, offScreen);
     
     // update agent car
     agentCar = agentCar.filter((car) => {

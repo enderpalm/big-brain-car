@@ -28,7 +28,7 @@ class Car {
 
         // motions
         this.controls = new CarControls(driveMode);
-        this.maxSpeed = maxSpeed;
+        this.maxSpeed = maxSpeed * simulationSpeed;
         this.speed = 0;
         this.angle = initialAngle;
 
@@ -43,8 +43,7 @@ class Car {
         this.discarded = false;
     }
 
-    update(roadInstance, traffic = [], offScreen) {
-
+    update(roadInstance, traffic = [], offScreen) {    
         if (this.crashState === 2) {
             if (!this.discarded) {
                 this.discarded = true;
@@ -72,7 +71,7 @@ class Car {
             });
         }
 
-        if (this.y > offScreen && this.crashState != 2) this.crashState = 2; 
+        if (this.y > offScreen && this.crashState != 2) this.crashState = 2;
 
         this.#updatePhysics();
         this.vertices = this.#createVertex();
